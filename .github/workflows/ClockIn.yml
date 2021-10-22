@@ -2,9 +2,13 @@
 name: 'BJUT Clock In'
 
 on:
-  # 当对分支main进行push操作的时候，这个工作流就被触发了
   push:
-    branches: [ main ]
+  schedule:
+    # 定时任务，在每天上午0点10分进行打卡
+    # - cron: '10 16 * * *'
+    
+    # 测试任务，在16:00进行打卡
+    - cron: '0 8 * * *'
 
 jobs:
   clock:
