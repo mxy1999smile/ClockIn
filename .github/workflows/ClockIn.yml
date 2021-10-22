@@ -17,4 +17,4 @@ jobs:
 
       # 执行仓库中的脚本文件
       - name: 'Clock In'
-        run: py ./bjut.py
+        run: python3 ./././bjut.py
