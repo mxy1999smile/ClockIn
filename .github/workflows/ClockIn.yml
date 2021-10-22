@@ -1,0 +1,20 @@
+
+name: 'BJUT Clock In'
+
+on:
+  # 当对分支main进行push操作的时候，这个工作流就被触发了
+  push:
+    branches: [ main ]
+
+jobs:
+  clock:
+    runs-on: ubuntu-latest
+    steps:
+
+      # 首先copy git仓库到虚拟机上
+      - name: 'Checkout codes'
+        uses: actions/checkout@v1
+
+      # 执行仓库中的脚本文件
+      - name: 'Clock In'
+        run: py ./bjut.py
