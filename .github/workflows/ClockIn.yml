@@ -5,7 +5,7 @@ on:
   push:
   schedule:
     # 定时任务，在每天上午0点10分进行打卡
-     - cron: '10 16 * * *'
+    - cron: '10 16 * * *'
 
 jobs:
   clock:
@@ -19,18 +19,16 @@ jobs:
       # 执行仓库中的脚本文件
       - name: 'Clock In'
         run: python3 ./././bjut.py
-      
-      - name: 'Send mail'
-        uses: dawidd6/action-send-mail@master
-        with:
-          server_address: smtp.163.com
-          server_port: 465
-          username: ${{ secrets.MAIL_USERNAME }}
-          password: ${{ secrets.MAIL_PASSWORD }}
-          subject: 打卡成功！
-          body: 今天好好学习了吗？：)
-          to: ${{ secrets.MAIL_USERNAME }}
-          from: GitHub Actions
-          content_type: text/plain
+        env:
+          EMAIL_USERNAME: ${{secrets.EMAIL_USERNAME}}
+          EMAIL_PASSWORD: ${{secrets.EMAIL_PASSWORD}}
 
-    
+          EMAIL_RECEIVER_1: ${{secrets.EMAIL_RECEIVER_1}}
+          EMAIL_RECEIVER_2: ${{secrets.EMAIL_RECEIVER_2}}
+
+          ID_1: ${{secrets.ID_1}}
+          ID_2: ${{secrets.ID_2}}
+
+          TOKEN_1: ${{secrets.TOKEN_1}}
+          TOKEN_2: ${{secrets.TOKEN_2}}
+
