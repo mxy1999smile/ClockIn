@@ -33,7 +33,7 @@ def send_email(subject, text, receiver):
     #构造邮件对象MIMEMultipart对象
     msg = MIMEMultipart('mixed')
     msg['Subject'] = subject
-    msg['From'] = EMAIL_USERNAME + ' <' + EMAIL_USERNAME + '>'
+    msg['From'] = 'bjutclockin@163.com <bjutclockin@163.com>'
 
     #收件人为多个收件人,通过join将列表转换为以;为间隔的字符串
     msg['To'] = ";".join(receiver)
