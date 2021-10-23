@@ -8,10 +8,6 @@ from os import environ
 #发件人
 EMAIL_PASSWORD = environ['EMAIL_PASSWORD']
 
-#收件人
-EMAIL_RECEIVER_1 = environ['EMAIL_RECEIVER_1']
-EMAIL_RECEIVER_2 = environ['EMAIL_RECEIVER_2']
-
 #ID&TOKEN
 ID_1 = environ['ID_1']
 ID_2 = environ['ID_2']
@@ -116,6 +112,9 @@ if __name__ == '__main__':
 
     token = [TOKEN_1, TOKEN_2]
 
+    #收件人
+    EMAIL_RECEIVER_1 = environ['EMAIL_RECEIVER_1']
+    EMAIL_RECEIVER_2 = environ['EMAIL_RECEIVER_2']
     receiver = [EMAIL_RECEIVER_1, EMAIL_RECEIVER_2]
 
     for i in range(len(id)):
