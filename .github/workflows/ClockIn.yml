@@ -18,7 +18,7 @@ jobs:
 
       # 执行仓库中的脚本文件
       - name: 'Clock In'
-        run: python3 ./././bjut.py
+        run: python3 ./././bjut1.py
         env:
           EMAIL_USERNAME: ${{secrets.EMAIL_USERNAME}}
           EMAIL_PASSWORD: ${{secrets.EMAIL_PASSWORD}}
