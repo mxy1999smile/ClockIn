@@ -28,7 +28,6 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: 打卡成功！
-          body: file://email.txt
           to: 1141617935@qq.com
           from: GitHub Actions
           content_type: text/plain
