@@ -27,11 +27,11 @@ jobs:
           server_address: smtp.qq.com
           server_port: 465
           # 这些sectret的环境变量需要配置在setting中的secret下
-          username: ${{ secrets.MAIL_USERNAME }}
+          username: ${{ secrets.MAIL_ADDRESS }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: 打卡成功！QWQ
           body: 开心每一天！
-          to: 1141617935@qq.com
+          to: ${{ secrets.MAIL_USERNAME }}@qq.com
           from: GitHub Actions
           content_type: text/html
     
