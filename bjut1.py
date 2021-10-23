@@ -6,7 +6,6 @@ from email.mime.text import MIMEText
 from os import environ
 
 #发件人
-EMAIL_USERNAME = environ['EMAIL_USERNAME']
 EMAIL_PASSWORD = environ['EMAIL_PASSWORD']
 
 #收件人
@@ -23,9 +22,9 @@ def send_email(subject, text, receiver):
 
     #下面的发件人，收件人是用于邮件传输的。
     smtpserver = 'smtp.163.com'
-    username = EMAIL_USERNAME
+    username = 'bjutclockin@163.com'
     password= EMAIL_PASSWORD
-    sender= EMAIL_USERNAME
+    sender= 'bjutclockin@163.com'
 
     #收件人为多个收件人
     receiver=[EMAIL_RECEIVER_1, EMAIL_RECEIVER_2]
