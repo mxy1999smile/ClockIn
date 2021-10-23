@@ -28,8 +28,8 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: 打卡成功！
-          body: 美好的一天开始了~
-          to: mxy1999smile@163.com
+          body: 今天好好学习了吗？：)
+          to: ${{ secrets.MAIL_USERNAME }}
           from: GitHub Actions
           content_type: text/plain
 
