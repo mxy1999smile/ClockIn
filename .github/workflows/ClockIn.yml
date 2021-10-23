@@ -19,3 +19,19 @@ jobs:
       # 执行仓库中的脚本文件
       - name: 'Clock In'
         run: python3 ./././bjut.py
+      
+      - name: 'Send email to user'
+        uses: dawidd6/action-send-mail@master
+        with:
+          # 这些是发送邮件需要配置的参数，更多详细的说明请访问具体的仓库
+          server_address: smtp.qq.com
+          server_port: 465
+          # 这些sectret的环境变量需要配置在setting中的secret下
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: 打卡成功！QWQ
+          body: 开心每一天！
+          to: 1141617935@qq.com
+          from: GitHub Actions
+          content_type: text/html
+    
