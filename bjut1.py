@@ -22,16 +22,10 @@ def send_email(subject, text, receiver):
     password= EMAIL_PASSWORD
     sender= 'bjutclockin@163.com'
 
-    #收件人为多个收件人
-    receiver=[EMAIL_RECEIVER_1, EMAIL_RECEIVER_2]
-
     #构造邮件对象MIMEMultipart对象
     msg = MIMEMultipart('mixed')
     msg['Subject'] = subject
     msg['From'] = 'bjutclockin@163.com <bjutclockin@163.com>'
-
-    #收件人为多个收件人,通过join将列表转换为以;为间隔的字符串
-    msg['To'] = ";".join(receiver)
 
     #构造文字内容
     text_plain = MIMEText(text, 'plain', 'utf-8')
