@@ -28,7 +28,7 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: 打卡成功！
-          to: 1141617935@qq.com
+          to: mxy1999smile@163.com
           from: GitHub Actions
           content_type: text/plain
 
