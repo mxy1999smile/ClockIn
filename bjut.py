@@ -63,11 +63,10 @@ def func(id, token):
 if __name__ == '__main__':
 
     #每七天重新获取一次id和token
-    id = [${{ secrets.ID_1 }},
-          ${{ secrets.ID_2 }}]
-    
-    token = [${{ secrets.TOKEN_1 }},
-             ${{ secrets.TOKEN_2 }}]
+    id = ['402880c97c4e3421017ca8d03cc53322',
+          '402880c97c4e3421017ca6b7bc8b1ac2']
+    token = ['7B758466270A26346D0CA04FC159BA76',
+             'D8126CB16B0DB40B94D748415731A313']
 
     for i in range(len(id)):
         func(id[i], token[i])
