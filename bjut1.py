@@ -11,8 +11,10 @@ EMAIL_PASSWORD = environ['EMAIL_PASSWORD']
 #ID&TOKEN
 ID_1 = environ['ID_1']
 ID_2 = environ['ID_2']
+ID_3 = environ['ID_3']
 TOKEN_1 = environ['TOKEN_1']
 TOKEN_2 = environ['TOKEN_2']
+TOKEN_3 = environ['TOKEN_3']
 
 def send_email(subject, text, receiver):
 
@@ -102,14 +104,15 @@ def func(id, token, receiver):
 if __name__ == '__main__':
 
     #每七天重新获取一次id和token
-    id = [ID_1, ID_2]
+    id = [ID_1, ID_2, ID_3]
 
-    token = [TOKEN_1, TOKEN_2]
+    token = [TOKEN_1, TOKEN_2, TOKEN_3]
 
     #收件人
     EMAIL_RECEIVER_1 = environ['EMAIL_RECEIVER_1']
     EMAIL_RECEIVER_2 = environ['EMAIL_RECEIVER_2']
-    receiver = [EMAIL_RECEIVER_1, EMAIL_RECEIVER_2]
+    EMAIL_RECEIVER_3 = environ['EMAIL_RECEIVER_3']
+    receiver = [EMAIL_RECEIVER_1, EMAIL_RECEIVER_2, EMAIL_RECEIVER_3]
 
     for i in range(len(id)):
         func(id[i], token[i], receiver[i])
