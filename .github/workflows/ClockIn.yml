@@ -4,8 +4,8 @@ name: 'BJUT Clock In'
 on:
   push:
   schedule:
-    # 定时任务，在每天上午0点10分进行打卡
-    - cron: '10 16 * * *'
+    # 定时任务，在每天上午7点10分进行打卡
+    - cron: '10 23 * * *'
 
 jobs:
   clock:
@@ -26,12 +26,15 @@ jobs:
           EMAIL_RECEIVER_1: ${{secrets.EMAIL_RECEIVER_1}}
           EMAIL_RECEIVER_2: ${{secrets.EMAIL_RECEIVER_2}}
           EMAIL_RECEIVER_3: ${{secrets.EMAIL_RECEIVER_3}}
+          EMAIL_RECEIVER_4: ${{secrets.EMAIL_RECEIVER_4}}
 
           ID_1: ${{secrets.ID_1}}
           ID_2: ${{secrets.ID_2}}
           ID_3: ${{secrets.ID_3}}
+          ID_4: ${{secrets.ID_4}}
 
           TOKEN_1: ${{secrets.TOKEN_1}}
           TOKEN_2: ${{secrets.TOKEN_2}}
           TOKEN_3: ${{secrets.TOKEN_3}}
+          TOKEN_4: ${{secrets.TOKEN_4}}
 
