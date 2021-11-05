@@ -96,7 +96,7 @@ def func(id, token, receiver):
     else:
         if r2.text == 'Applied today':
             print('今天已经打过卡')
-            send_email('打过卡了打过卡了！', ':（', receiver)
+            send_email('测试邮件，不必理会。打过卡了打过卡了！', ':（', receiver)
         else:
             print('打卡失败')
             send_email('失败了失败了！！！', 'ID和TOKEN过期了！！！\n：(\n火速联系管理员更换，一次八百', receiver)
