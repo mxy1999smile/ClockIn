@@ -27,14 +27,17 @@ jobs:
           EMAIL_RECEIVER_2: ${{secrets.EMAIL_RECEIVER_2}}
           EMAIL_RECEIVER_3: ${{secrets.EMAIL_RECEIVER_3}}
           EMAIL_RECEIVER_4: ${{secrets.EMAIL_RECEIVER_4}}
+          EMAIL_RECEIVER_5: ${{secrets.EMAIL_RECEIVER_5}}
 
           ID_1: ${{secrets.ID_1}}
           ID_2: ${{secrets.ID_2}}
           ID_3: ${{secrets.ID_3}}
           ID_4: ${{secrets.ID_4}}
+          ID_5: ${{secrets.ID_5}}
 
           TOKEN_1: ${{secrets.TOKEN_1}}
           TOKEN_2: ${{secrets.TOKEN_2}}
           TOKEN_3: ${{secrets.TOKEN_3}}
           TOKEN_4: ${{secrets.TOKEN_4}}
+          TOKEN_5: ${{secrets.TOKEN_5}}
 
